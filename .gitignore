@@ -9,3 +9,9 @@ Thumbs.db
 
 # IDE
 .vscode
+
+# bin
+awsenvsec
+
+# unused
+unused.txt
