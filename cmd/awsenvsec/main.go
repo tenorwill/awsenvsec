@@ -77,18 +77,18 @@ func init() {
 	flag.BoolVar(recursiveFlag, "c", false, "Recursive Flag")
 
 	flag.Usage = func() {
-		fmt.Println(("Usage: ") + os.Args[0] + " [-p profile] [-r region] [-o output] [-sm smpath] [-ps pspath]")
+		fmt.Println(("Usage: ") + os.Args[0] + " [-p profile] [-r region] [-sm smpath] [-ps pspath] [-c recursive] [-o output]")
 
 		fmt.Println("\nFlags:")
 		flagOptions := "  -p  | --profile         AWS Profile (Profile Name - Optional)\n" +
 			"  -r  | --region          AWS Region (Default: us-east-1)\n" +
-			"  -sm | --smpath          AWS Secrets Manager Path (example: \"my/app/dev\")\n" +
-			"  -ps | --pspath          AWS Parameter Store Path (example: \"/my/app/dev\")\n" +
+			"  -sm | --smpath          AWS Secrets Manager Path (example: \"product/dev/var\")\n" +
+			"  -ps | --pspath          AWS Parameter Store Path (example: \"/product/dev/var\")\n" +
 			"  -c  | --recursive       Recursive Flag (used if recursion is needed in Parameter Store)\n" +
 			"  -o  | --output          Output to environment file (optional: must be either \"env\" or \"json\")\n"
 
 		fmt.Println(flagOptions)
-		fmt.Println("Example: " + os.Args[0] + " -p profile_mfa -r us-east-1 -o json -sm \"web/app/prod\" -ps \"/web/app/prod\" \n")
+		fmt.Println("Example: " + os.Args[0] + " -p myprofile -r us-east-1 -sm \"product/dev/var\" -ps \"/product/dev/var\" -c -o json\n")
 	}
 }
 

@@ -10,8 +10,5 @@ Thumbs.db
 # IDE
 .vscode
 
-# bin
-bin/awsenvsec
-
 # unused
 unused.txt
