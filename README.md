@@ -9,7 +9,7 @@
 <hr>
 
 ## Summary
-`awsenvsec` is a tool to decrypt AWS secrets and/or parameters from AWS Secrets Manager and Parameter Store for use as environment variables. There are two modes: default (no flags) and output. When output is selected, the results are formatted as JSON or ENV formats. When output is not used, exports are printed to the screen which can be evaluated (see Docker below).
+`awsenvsec` is a tool to decrypt AWS secrets and/or parameters from AWS Secrets Manager and Parameter Store for use as environment variables. There are two modes: default (no flags) and output. When output is selected, the results are formatted as JSON or ENV formats. When output is not used, exports are printed to the screen which can be evaluated (see Docker below). 
 
 
 ## How It Works
