@@ -6,7 +6,7 @@
 <h4 align="center">Retrieve AWS Secrets as Environment Variables from Secrets Manager and/or Parameter Store</h4>
 <p align="center">
 <a href="https://goreportcard.com/report/github.com/tenorwill/awsenvsec"><img src="https://goreportcard.com/badge/github.com/tenorwill/awsenvsec"></img></a>
-<a href="">[![Go](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml/badge.svg)](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml)</a>
+<a href="https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml"><img src="https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml/badge.svg"></img></a>
 </p>
 <hr>
 
