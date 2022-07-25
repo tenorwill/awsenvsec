@@ -1,3 +1,4 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/tenorwill/awsenvsec)](https://goreportcard.com/report/github.com/tenorwill/awsenvsec)
 <hr>
 <p align="center">
   <img src="reference/awsenvsec.png" width=231px >
