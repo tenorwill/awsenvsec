@@ -4,9 +4,9 @@
 </p>
 <h1 align="center">awsenvsec</h1>
 <h4 align="center">Retrieve AWS Secrets as Environment Variables from Secrets Manager and/or Parameter Store</h4>
-<div align="center">
-<a href="">![Go Report Card](https://goreportcard.com/badge/github.com/tenorwill/awsenvsec)(https://goreportcard.com/report/github.com/tenorwill/awsenvsec)</a>
-<a href="">![Go](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml/badge.svg)(https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml)</a>
+<align="center">
+<a href="https://goreportcard.com/report/github.com/tenorwill/awsenvsec">https://goreportcard.com/badge/github.com/tenorwill/awsenvsec)</a>
+<a href="">[![Go](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml/badge.svg)](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml)</a>
 </div>
 <hr>
 
