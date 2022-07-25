@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/tenorwill/awsenvsec)](https://goreportcard.com/report/github.com/tenorwill/awsenvsec)
+[![Go](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yml/badge.svg)](https://github.com/tenorwill/awsenvsec/actions/workflows/go.yml)
 <hr>
 <p align="center">
   <img src="reference/awsenvsec.png" width=231px >
