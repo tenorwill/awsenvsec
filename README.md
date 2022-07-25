@@ -8,6 +8,8 @@
 <a href="https://goreportcard.com/report/github.com/tenorwill/awsenvsec"><img src="https://goreportcard.com/badge/github.com/tenorwill/awsenvsec"></img></a>
 <a href="https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml"><img src="https://github.com/tenorwill/awsenvsec/actions/workflows/go.yaml/badge.svg"></img></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg"></img></a>
+<a href="https://github.com/tenorwill/awsenvsec"><img src="https://img.shields.io/github/go-mod/go-version/tenorwill/awsenvsec.svg"></img></a>
+</p>
 <hr>
 
 ## Summary
