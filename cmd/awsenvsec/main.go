@@ -129,10 +129,10 @@ func main() {
 		if secrets != nil {
 			for _, s := range secrets {
 				var secretsMap map[string]interface{}
-				secretJson := decryptSecret(s.Name)
+				decryptedSecret := decryptSecret(s.Name)
 				// Check if result is JSON or Plaintext
-				if isItJSON(secretJson) {
-					err := json.Unmarshal([]byte(secretJson), &secretsMap)
+				if isItJSON(decryptedSecret) {
+					err := json.Unmarshal([]byte(decryptedSecret), &secretsMap)
 					if err != nil {
 						fmt.Println(err)
 					}
@@ -143,7 +143,7 @@ func main() {
 					}
 				} else {
 					k := strings.ToUpper(fmt.Sprintf(s.Name[strings.LastIndex(s.Name, "/")+1:]))
-					v := decryptSecret(s.Name)
+					v := decryptedSecret
 					resultsMap[k] = v
 				}
 			}
