@@ -137,12 +137,11 @@ func main() {
 						fmt.Println(err)
 					}
 					for k, v := range secretsMap {
-						k = strings.ToUpper(k)
 						val := fmt.Sprintf("%v", v)
 						resultsMap[k] = val
 					}
 				} else {
-					k := strings.ToUpper(fmt.Sprintf(s.Name[strings.LastIndex(s.Name, "/")+1:]))
+					k := fmt.Sprintf(s.Name[strings.LastIndex(s.Name, "/")+1:])
 					v := decryptedSecret
 					resultsMap[k] = v
 				}
@@ -158,7 +157,7 @@ func main() {
 
 		if parameters != nil {
 			for _, p := range parameters {
-				param := strings.ToUpper(fmt.Sprintf(p.Name[strings.LastIndex(p.Name, "/")+1:]))
+				param := fmt.Sprintf(p.Name[strings.LastIndex(p.Name, "/")+1:])
 				resultsMap[param] = p.Value
 			}
 		} else {
@@ -174,25 +173,31 @@ func main() {
 			resultsMapSorted = append(resultsMapSorted, k)
 		}
 		sort.Strings(resultsMapSorted)
-		fmt.Println("\n# Environment Variables: " + date + "\n")
+		fmt.Println("\n# Path(s) " + *smPathFlag + " " + *psPathFlag + "\n# Environment Variables: " + date)
 		for _, k := range resultsMapSorted {
 			fmt.Println(k + "=" + "\"" + resultsMap[k] + "\"")
 		}
 		os.Exit(0)
 	case "json":
-		// Serialize the map into JSON
-		jsonOutput, err := json.Marshal(resultsMap)
-		if err != nil {
+		// Serialize the map into JSON, escape HTML characters ("<", ">", "&")
+		buf := new(bytes.Buffer)
+		encJSON := json.NewEncoder(buf)
+		encJSON.SetEscapeHTML(false)
+
+		if err := encJSON.Encode(resultsMap); err != nil {
 			fmt.Println(err)
 		}
+		jsonOutput := bytes.TrimRight(buf.Bytes(), "\n")
+
 		// "Pretty" print the JSON for a nicer, indented output
 		var prettyJSON bytes.Buffer
-		error := json.Indent(&prettyJSON, []byte(jsonOutput), "", "   ")
+		//error := json.Indent(&prettyJSON, []byte(jsonOutput), "", "   ")
+		error := json.Indent(&prettyJSON, jsonOutput, "", "   ")
 		if error != nil {
 			fmt.Println(" ")
 			return
 		}
-		fmt.Println("\n# Environment Variables: " + date + "\n")
+		fmt.Println("\n# Path(s): " + *smPathFlag + " " + *psPathFlag + "\n# Environment Variables (JSON): " + date)
 		fmt.Print(string(prettyJSON.Bytes()), "\n")
 		os.Exit(0)
 	}
